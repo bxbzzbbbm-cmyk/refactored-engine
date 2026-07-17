@@ -1,0 +1,28 @@
+name: Start Ngrok Tunnel
+
+on:
+  workflow_dispatch:
+    inputs:
+      ngrok_token:
+        description: "Input Ngrok authtoken"
+        required: true
+        type: string
+
+jobs:
+  tunnel:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download ngrok
+        run: |
+          wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip
+          unzip ngrok.zip
+          chmod +x ngrok
+
+      - name: Configure ngrok authtoken
+        run: |
+          ./ngrok authtoken "${{ inputs.ngrok_token }}"
+
+      - name: Start tunnel
+        run: |
+          ./ngrok http 5900 &
