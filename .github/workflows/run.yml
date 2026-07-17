@@ -1,0 +1,25 @@
+name: Run Node App
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          npm install express @whiskeysockets/baileys
+
+      - name: Start Node server
+        env:
+          PORT: 5900
+        run: |
+          node index.js &
