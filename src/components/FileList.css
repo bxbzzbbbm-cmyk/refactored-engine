@@ -1,0 +1,136 @@
+.file-list-container {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  border-right: 4px solid #764ba2;
+}
+
+.file-list-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.no-files {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 1.05em;
+}
+
+.file-list {
+  list-style: none;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+  transform: translateX(5px);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.file-icon {
+  font-size: 1.5em;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1em;
+  word-break: break-all;
+}
+
+.file-size {
+  color: #999;
+  font-size: 0.85em;
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-view {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #90caf9;
+}
+
+.btn-view:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn-download {
+  background-color: #e8f5e9;
+  color: #388e3c;
+  border: 1px solid #81c784;
+}
+
+.btn-download:hover {
+  background-color: #388e3c;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ef5350;
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .file-actions {
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    text-align: center;
+  }
+}

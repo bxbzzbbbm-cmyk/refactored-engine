@@ -1,0 +1,63 @@
+.file-manager-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.file-manager-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.file-manager-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.file-manager-header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px 20px;
+  margin: 20px;
+  border-radius: 6px;
+  border: 1px solid #f5c6cb;
+}
+
+.file-manager-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px;
+}
+
+.left-panel,
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .file-manager-content {
+    grid-template-columns: 1fr;
+  }
+
+  .file-manager-header h1 {
+    font-size: 1.8em;
+  }
+}
